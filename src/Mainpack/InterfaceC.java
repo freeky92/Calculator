@@ -141,8 +141,4 @@ public class InterfaceC {
             return false;
         }
     }
-
-    private static void result(int res){
-
-    }
 }

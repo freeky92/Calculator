@@ -30,7 +30,6 @@ public class Calculator {
         Calculator.b = b;
     }
 
-
     static double addition(double a, double b) {
         return a + b;
     }

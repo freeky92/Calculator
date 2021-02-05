@@ -59,10 +59,7 @@ public class InterfaceC {
                 }
             }
 
-            boolean division = (Calculator.getOperation()).equals("/");
-            boolean sqrt = (Calculator.getOperation()).equals("sqrt");
-
-            if (!sqrt) {
+            if (!Calculator.getOperation().equals("sqrt")) {
                 while (true) {
 
                     String digitB = JOptionPane.showInputDialog(massages.get(3));
@@ -109,25 +106,25 @@ public class InterfaceC {
                     System.out.println(resultPow);
                     JOptionPane.showMessageDialog(null, resultPow, resultTitle, JOptionPane.INFORMATION_MESSAGE);
                 }
-
+                case "/" -> {
+                    if (b != 0) {
+                        System.out.println(resultDivision);
+                        JOptionPane.showMessageDialog(null, resultDivision, resultTitle, JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        System.out.println(errorList.get(0));
+                        JOptionPane.showMessageDialog(null, errorList.get(0), errorTitle, JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }
+                case "sqrt" -> {
+                    if (a >= 0) {
+                        JOptionPane.showMessageDialog(null, resultSqrt, resultTitle, JOptionPane.INFORMATION_MESSAGE);
+                        System.out.println(resultSqrt);
+                    } else {
+                        System.out.println(a + errorList.get(2));
+                        JOptionPane.showMessageDialog(null, a + errorList.get(2), errorTitle, JOptionPane.INFORMATION_MESSAGE);
+                    }
+                }
             }
-
-            if (division && b != 0) {
-                System.out.println(resultDivision);
-                JOptionPane.showMessageDialog(null, resultDivision, resultTitle, JOptionPane.INFORMATION_MESSAGE);
-            } else if ((!sqrt) && b == 0) {
-                System.out.println(errorList.get(0));
-                JOptionPane.showMessageDialog(null, errorList.get(0), errorTitle, JOptionPane.INFORMATION_MESSAGE);
-            }
-
-            if (sqrt && a >= 0) {
-                JOptionPane.showMessageDialog(null, resultSqrt, resultTitle, JOptionPane.INFORMATION_MESSAGE);
-                System.out.println(resultSqrt);
-            } else if (a < 0) {
-                System.out.println(a + errorList.get(2));
-                JOptionPane.showMessageDialog(null, a + errorList.get(2), errorTitle, JOptionPane.INFORMATION_MESSAGE);
-            }
-
             System.out.println("\nNEW Iteration");
 
         }

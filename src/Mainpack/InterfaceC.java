@@ -15,7 +15,7 @@ public class InterfaceC {
         errorList.add("Вы не ввели число!");
         errorList.add(" - ЯВЛЯЕТСЯ ОТРИЦАТЕЛЬНЫМ!");
         errorList.add("Вы ввели неверный оператор или оставили строку пустой!");
-        errorList.add("");
+        errorList.add("Для завершения работы ведите \"end\".   ");
 
         ArrayList<String> massages = new ArrayList<>();
         massages.add("Завершение программы");
@@ -39,7 +39,7 @@ public class InterfaceC {
                     System.exit(0);
                 } else {
                     System.out.println(errorList.get(1));
-                    JOptionPane.showMessageDialog(null, errorList.get(1), errorTitle, JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, errorList.get(1)+"\n"+errorList.get(4), errorTitle, JOptionPane.INFORMATION_MESSAGE);
                 }
             }
 
@@ -55,7 +55,7 @@ public class InterfaceC {
                     System.exit(0);// Завершает программу
                 } else {
                     System.out.println(errorList.get(3)); //ошибка, не оператор, отправляет на повтор в While
-                    JOptionPane.showMessageDialog(null, errorList.get(3), errorTitle, JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, errorList.get(3)+"\n"+errorList.get(4), errorTitle, JOptionPane.INFORMATION_MESSAGE);
                 }
             }
 
@@ -73,7 +73,7 @@ public class InterfaceC {
                         System.exit(0);
                     } else {
                         System.out.println(errorList.get(1));
-                        JOptionPane.showMessageDialog(null, errorList.get(1), errorTitle, JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, errorList.get(1)+"\n"+errorList.get(4), errorTitle, JOptionPane.INFORMATION_MESSAGE);
                     }
                 }
             }

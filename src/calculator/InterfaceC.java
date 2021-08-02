@@ -1,4 +1,4 @@
-package Mainpack;
+package calculator;
 
 import javax.swing.*;
 import java.util.ArrayList;

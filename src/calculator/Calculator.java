@@ -1,8 +1,9 @@
-package Mainpack;
+package calculator;
 
-public class Calculator {
+public class  Calculator {
 
-    private static double a, b;
+    private static double a;
+    private static double b;
 
     private static String operation;
 
@@ -55,9 +56,6 @@ public class Calculator {
     static double sqrt(double a) {
 
         return Math.sqrt(a);
-    }
-
-    static void main(String[] args) {
     }
 
 }

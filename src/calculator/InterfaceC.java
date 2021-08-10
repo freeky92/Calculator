@@ -11,7 +11,7 @@ public class InterfaceC {
         String end = "end";
 
         ArrayList<String> errorList = new ArrayList<>();
-        errorList.add("Нельзя делитьна 0!");
+        errorList.add("Нельзя делить на 0!");
         errorList.add("Вы не ввели число!");
         errorList.add(" - ЯВЛЯЕТСЯ ОТРИЦАТЕЛЬНЫМ!");
         errorList.add("Вы ввели неверный оператор или оставили строку пустой!");
